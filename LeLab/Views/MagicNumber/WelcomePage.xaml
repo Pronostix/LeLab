@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.MagicNumber.WelcomePage"
+             BackgroundColor="{StaticResource backgroundColor}"
+             xmlns:view="clr-namespace:LeLab.Views.MagicNumber">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            
+            <view:StarView/>
+
+            <Frame BackgroundColor="Transparent" HasShadow="False" VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="Center">
+                    <Label Text="Le nombre magique" FontSize="45" TextColor="{StaticResource titleColor}" HorizontalTextAlignment="Center"/>
+            
+                    <Button BackgroundColor="{StaticResource shadowColor}" Text="Jouer" Clicked="PlayButtonClick" 
+                            HorizontalOptions="Center" Margin="0,30,0,0"
+                            WidthRequest="150" TextColor="White" x:Name="playButton"/>
+            
+                </StackLayout>                 
+            </Frame>
+            <BoxView Color="{StaticResource shadowColor}" HeightRequest="120" Rotation="-10" Margin="-20,0,-20,-35"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

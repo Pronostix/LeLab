@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.MenuPage"
+             Title="Menu">
+    <ContentPage.Content>
+
+        <StackLayout Spacing="0" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <!--Text-->
+            <StackLayout BackgroundColor="#518faa" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                <Image Margin="0,30,0,0" Source="lab_logo.png" HeightRequest="100" Aspect="AspectFit"/>
+                <Label Margin="0,10,0,20" FontFamily="HelveticaNeue-Thin" Text="LE LAB" FontSize="30"  HorizontalOptions="Center"  FontAttributes="Bold">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>HelveticaNeue-Thin</OnPlatform.iOS>
+                            <OnPlatform.Android>HelveticaNeue-Thin.ttf#HelveticaNeue-Thin</OnPlatform.Android>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <Image Source="lab_separator.png" />
+            <!--Bouton-->
+            <StackLayout Margin="30,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c1ab24" Margin="0,20,0,0" Text="Compteur"  Clicked="GoCountPage" HorizontalOptions="FillAndExpand" />
+                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#a4881c" Margin="0,20,0,0" Text="Tabs"  Clicked="GoTabsPage" HorizontalOptions="FillAndExpand" />
+                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c60e3c" Margin="0,20,0,0" Text="Liste"  Clicked="GoListePage" HorizontalOptions="FillAndExpand" />
+                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumSlateBlue" Margin="0,20,0,0" Text="Magic Number"  Clicked="GoMagicNumberPage" HorizontalOptions="FillAndExpand" />
+            </StackLayout>          
+            
+        </StackLayout>
+        
+    </ContentPage.Content>
+        
+</ContentPage>

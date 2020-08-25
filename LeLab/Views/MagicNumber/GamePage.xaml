@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.MagicNumber.GamePage"
+             BackgroundColor="{StaticResource backgroundColor}"             
+             xmlns:view="clr-namespace:LeLab.Views.MagicNumber">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <view:StarView Grid.Row="0" Grid.Column="0"/>
+
+            <StackLayout Orientation="Vertical" Spacing="0" Grid.Row="1" Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Devinez le nombre magique" FontSize="40"  TextColor="{StaticResource titleColor}" HorizontalTextAlignment="Center"/>
+
+                <Label x:Name="MinMaxNumber" FontSize="20"  FontAttributes="Italic" HorizontalOptions="Center" TextColor="{StaticResource titleColor}"/>
+
+                <Entry Placeholder="?" PlaceholderColor="White" FontSize="60"  BackgroundColor="{StaticResource shadowColor}"  Keyboard="Numeric" 
+                       x:Name="entryNumber" Margin="0,10,0,10"
+                       WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+
+                <Button BackgroundColor="{StaticResource shadowColor}" Text="Deviner" Clicked="FindButtonClick" HorizontalOptions="Center" 
+                        WidthRequest="100" TextColor="White"/>
+
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                    <Label Text="Nombre de tentatives" FontSize="20"  VerticalTextAlignment="Center" TextColor="{StaticResource titleColor}"/>
+                    <Label Text="0" x:Name="countNumber" FontSize="20"  FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="{StaticResource titleColor}"/>                
+                </StackLayout>
+            
+            </StackLayout>
+            <BoxView Color="{StaticResource shadowColor}" HeightRequest="120" Rotation="-10" Margin="-20,0,-20,-35" Grid.Row="2" Grid.Column="0" />
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
