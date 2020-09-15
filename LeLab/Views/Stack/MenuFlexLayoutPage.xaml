@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.Stack.MenuFlexLayoutPage"
+             Title="FlexLayout">
+    <ContentPage.Content>
+        <StackLayout Margin="30,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+            <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumSeaGreen" Margin="0,20,0,0" Text="Test Stack FlexLayout"  Clicked="GoFlexLayoutStack" HorizontalOptions="FillAndExpand" />
+            <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumTurquoise" Margin="0,20,0,0" Text="Test Grow FlexLayout"  Clicked="GoFlexLayoutGrow" HorizontalOptions="FillAndExpand" />
+            <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="Teal" Margin="0,20,0,0" Text="Test Wrap FlexLayout"  Clicked="GoFlexLayoutWrap" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

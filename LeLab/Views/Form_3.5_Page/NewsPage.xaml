@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.Form_3._5_Page.NewsPage"
+             Title="Nouveautés">
+    <NavigationPage.TitleView>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" 
+                     Margin="{OnPlatform iOS='0,0,25,0', Android='0,0,80,0', Default=0}">
+            <Image Source="lab_logo.png" HeightRequest="40"/>
+            <Label Text="Nouveauté Forms 3.5" FontAttributes="Bold" VerticalOptions="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="20,50,20,0">
+            <Label Text="NavigationPage.TitleView" FontAttributes="Bold" />
+            <Label Text="ImageButton avec le VisualStateManager" FontAttributes="Bold" />
+            <Label Text="NavigationPage.TitleView" FontAttributes="Bold" />
+            <Label Text="Lien Hyper Texte avec Span.GestureRecognizers" FontAttributes="Bold" />
+            <Label Text="WebView" FontAttributes="Bold" />
+            
+            <!-- Problème de visuel de l'image boutton
+            https://docs.microsoft.com/fr-fr/xamarin/xamarin-forms/user-interface/imagebutton-->
+            
+            <ImageButton Source="lab_logo.png" WidthRequest="100" Clicked="ClicImage" BackgroundColor="Transparent">
+                
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                            Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                            Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Cette application a été écrite avec Xamarin Forms: " />
+                            <Span Text="en savoir plus" FontAttributes="Bold" TextColor="Blue" TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer 
+							Command="{Binding ClickCommand}"
+							CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

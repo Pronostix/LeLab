@@ -4,6 +4,8 @@
              x:Class="LeLab.Views.MenuPage"
              Title="Menu">
     <ContentPage.Content>
+        
+            
 
         <StackLayout Spacing="0" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <!--Text-->
@@ -20,13 +22,18 @@
             </StackLayout>
             <Image Source="lab_separator.png" />
             <!--Bouton-->
-            <StackLayout Margin="30,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
-                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c1ab24" Margin="0,20,0,0" Text="Compteur"  Clicked="GoCountPage" HorizontalOptions="FillAndExpand" />
-                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#a4881c" Margin="0,20,0,0" Text="Tabs"  Clicked="GoTabsPage" HorizontalOptions="FillAndExpand" />
-                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c60e3c" Margin="0,20,0,0" Text="Liste"  Clicked="GoListePage" HorizontalOptions="FillAndExpand" />
-                <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumSlateBlue" Margin="0,20,0,0" Text="Magic Number"  Clicked="GoMagicNumberPage" HorizontalOptions="FillAndExpand" />
-            </StackLayout>          
-            
+            <ScrollView>
+                <StackLayout Margin="30,0" Orientation="Vertical" HorizontalOptions="FillAndExpand" >
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c1ab24" Margin="0,20,0,0" Text="Compteur"  Clicked="GoCountPage" HorizontalOptions="FillAndExpand" />
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#a4881c" Margin="0,20,0,0" Text="Tabs"  Clicked="GoTabsPage" HorizontalOptions="FillAndExpand" />
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="#c60e3c" Margin="0,20,0,0" Text="Liste"  Clicked="GoListePage" HorizontalOptions="FillAndExpand" />
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumSlateBlue" Margin="0,20,0,0" Text="Magic Number"  Clicked="GoMagicNumberPage" HorizontalOptions="FillAndExpand" />
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumSeaGreen" Margin="0,20,0,0" Text="FlexLayout"  Clicked="GoFlexLayout" HorizontalOptions="FillAndExpand" />
+                    <Button Style="{StaticResource boutonLabStyle}" BackgroundColor="MediumTurquoise" Margin="0,20,0,0" Text="News Xamarin 3.5"  Clicked="GoNewsPage" HorizontalOptions="FillAndExpand" />
+                    
+                </StackLayout>
+            </ScrollView>
+
         </StackLayout>
         
     </ContentPage.Content>

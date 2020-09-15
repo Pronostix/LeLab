@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.Stack.FlexLayoutGrow">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column">
+
+            <FlexLayout Direction="Column" FlexLayout.Grow="1" AlignItems="Center" JustifyContent="Center">
+                
+                <!--<BoxView FlexLayout.Grow="1" BackgroundColor="Transparent" Margin="1"/>-->
+                
+                <BoxView FlexLayout.Basis="30%"  BackgroundColor="Peru" Margin="20,0" FlexLayout.AlignSelf="Stretch"/>
+                <Label Text="Mon texte" BackgroundColor="Transparent" Margin="0.1" />
+                
+                <!--<BoxView FlexLayout.Grow="1" BackgroundColor="Transparent" Margin="1"/>-->
+            </FlexLayout>
+
+            <FlexLayout FlexLayout.Basis="70">
+                <BoxView FlexLayout.Grow="1" BackgroundColor="Lime" Margin="1"/>
+                <BoxView FlexLayout.Grow="1" BackgroundColor="Yellow" Margin="1"/>
+                <BoxView FlexLayout.Grow="1" BackgroundColor="Teal" Margin="1"/>
+                
+            </FlexLayout>
+
+        </FlexLayout>
+
+        <!--<FlexLayout Direction="Column">
+            <BoxView FlexLayout.Grow="1" BackgroundColor="Green" />
+            <BoxView FlexLayout.Basis="100" BackgroundColor="Yellow"/>
+        </FlexLayout>-->
+
+    </ContentPage.Content>
+</ContentPage>

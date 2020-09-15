@@ -1,4 +1,6 @@
-﻿using LeLab.Views.MagicNumber;
+﻿using LeLab.Views.Form_3._5_Page;
+using LeLab.Views.MagicNumber;
+using LeLab.Views.Stack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +37,17 @@ namespace LeLab.Views
         private void GoMagicNumberPage(object sender, EventArgs e)
         {
             this.Navigation.PushAsync(new WelcomePage());
+        }
+
+        private void GoFlexLayout(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new MenuFlexLayoutPage());
+            
+        }
+
+        private void GoNewsPage(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new NewsPage());
         }
     }
 }

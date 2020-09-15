@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LeLab.Views.TabsPage"
              Title="Tabs"
-             xmlns:views="clr-namespace:LeLab.Views">
+             xmlns:views="clr-namespace:LeLab.Views"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"        
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarItemColor="Black"
+             android:TabbedPage.BarSelectedItemColor="White">
     <TabbedPage.BarBackgroundColor>
         <OnPlatform x:TypeArguments="Color">
             <OnPlatform.iOS>White</OnPlatform.iOS>

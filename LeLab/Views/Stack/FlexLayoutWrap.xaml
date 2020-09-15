@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.Stack.FlexLayoutWrap"
+             BackgroundColor="Bisque">
+    
+    <ContentPage.Resources>
+        <!--Avec une classe CSS-->
+        <StyleSheet Source="MyStyle.css"/>
+        <!--Avec une classe Xamarin-->
+        <Style TargetType="BoxView" x:Key="MyBox">
+            <Setter Property="BackgroundColor" Value="#FF008080" />
+            <Setter Property="WidthRequest" Value="60"/>
+            <Setter Property="HeightRequest" Value="60"/>
+            <Setter Property="Margin" Value="2"/>            
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <!--<ScrollView>
+            <StackLayout>-->
+        <ScrollView Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal">
+                <!--<FlexLayout Wrap="Wrap" BackgroundColor="Bisque" JustifyContent="Center" x:Name="flexLayout">-->
+                <FlexLayout Direction="Column" BackgroundColor="Bisque" JustifyContent="Center" x:Name="flexLayout" Wrap="Wrap" AlignItems="Center">
+                    <BoxView Style="{StaticResource MyBox}"/>
+                    <BoxView Style="{StaticResource MyBox}"/>
+                    <BoxView StyleClass="styleBox"/>
+                    <BoxView StyleClass="styleBox"/>
+                 </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

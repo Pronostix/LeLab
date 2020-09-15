@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LeLab.Views.Stack.FlexLayoutStack">
+    <ContentPage.Content>
+
+        <FlexLayout x:Name="flexLayout" BackgroundColor="Aqua" 
+                    Direction="Row"
+                    AlignItems="Center" 
+                    JustifyContent="Start" >
+            <Label Text="FlexL 1" BackgroundColor="HotPink" />
+            <Label Text="FlexL 2" BackgroundColor="Blue" />
+            <Button Text="FlexL Clic" BackgroundColor="IndianRed" x:Name="MyButton"/>
+
+            <StackLayout BackgroundColor="LightGreen"
+                         FlexLayout.AlignSelf="Center">
+                <Label Text="StackL 1" BackgroundColor="Beige" />
+                <Label Text="StackL 2" BackgroundColor="GreenYellow" />
+                <Label Text="StackL 3" BackgroundColor="IndianRed" />
+            </StackLayout>
+
+        </FlexLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
